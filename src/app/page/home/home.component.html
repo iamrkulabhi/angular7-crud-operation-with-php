@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of allusers; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.age}}</td>
+            <td>
+                <ul class="action-option">
+                    <li><a routerLink="/edit-user/{{user.id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></li>
+                    <li><a href="#" (click)="deleteUser(user.id)"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,7 @@
+ul.action-option li {
+    list-style-type: none;
+    display: inline-flex;
+    margin: 0px;
+    padding: 0 5px;
+    float: left;
+}
